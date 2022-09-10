@@ -6,7 +6,7 @@
  *
  * Description: Get a random number and print the number
  * and check if the number is positive, negative, or zero
- * return:0
+ * Return: always 0 (success)
  */
 int main(void)
 {
