@@ -2,23 +2,23 @@
 #include "main.h"
 
 /**
- * _putchar - entrypoint
+ * main  - entrypoint
  *
- * Description: Prints main with _putchar
- * @c: -
+ * Description: Print _putchar
+ *
  * Return: Always 0
  */
 
-int _putchar(char c)
+int main(void)
 {
-int i = 0;
-char name_of_school[] = "ALX";
+char name[10] = "_putchar";
 
-while (i < 9)
+int i;
+
+for (i = 0; i < 8; i++)
 {
-_putchar(name_of_school[i]);
-i++;
+_putchar(name[i]);
 }
-_putchar('\n');
+_putchar(10);
 return (0);
 }
