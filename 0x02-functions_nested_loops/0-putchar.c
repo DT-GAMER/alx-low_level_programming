@@ -13,7 +13,7 @@ int _putchar(char c)
 {
 int i = 0;
 char c;
-char s[] = "_putchar\n";
+char c[] = "_putchar\n";
 
 while (i <= 9)
 {
