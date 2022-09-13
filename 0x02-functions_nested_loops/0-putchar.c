@@ -12,13 +12,13 @@
 int _putchar(char c)
 {
 int i = 0;
-char s[] = "_putchar\n";
+char name_of_school[] = "ALX";
 
-while (i <= 9)
+while (i < 9)
 {
-c = s[i];
-_putchar(c);
+_putchar(name_of_school[i]);
 i++;
 }
+_putchar('\n');
 return (0);
 }
