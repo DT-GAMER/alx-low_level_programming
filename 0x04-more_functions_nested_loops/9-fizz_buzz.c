@@ -1,41 +1,35 @@
 #include "main.h"
 #include <stdio.h>
 
+#include <stdio.h> 
+ #include "holberton.h" 
+  
  /** 
-  * times_table -  a function that prints the 9 times table, starting with 0 
-  * rone = row, cone = column, d = digits of current result 
-  * Return: times table 
-  * add extra space past single digit 
+  * main - entry point 
+  * 
+  * Description: prints the numbers 1 - 100 w/ 
+  * Fizz for multiples of 3, Buzz for multiples of 5, 
+  * and FizzBuzz for multiples of both 
+  * 
+  * Return: always 0 
   */ 
- void times_table(void) 
+ int main(void) 
  { 
-         int rone, cone, d; 
+         int i; 
   
-         for (rone = 0; rone <= 9; rone++) 
+         for (i = 1; i <= 100; i++) 
          { 
-                 _putchar('0'); 
-                 _putchar(','); 
-                 _putchar(' '); 
-                 for (cone = 1; cone <= 9; cone++) 
-                 { 
-                         d = (rone * cone); 
-                         if ((d / 10) > 0) 
-                         { 
-                                 _putchar((d / 10) + '0'); 
-                         } 
-                         else 
-                         { 
-                                 _putchar(' '); 
-                         } 
-                         _putchar((d % 10) + '0'); 
-  
-                         if (cone < 9) 
-                         { 
-                                 _putchar(','); 
-                                 _putchar(' '); 
-                         } 
-                 } 
-                 _putchar('\n'); 
+                 if (i % 15 == 0) 
+                         printf("FizzBuzz"); 
+                 else if (i % 3 == 0) 
+                         printf("Fizz"); 
+                 else if (i % 5 == 0) 
+                         printf("Buzz"); 
+                 else 
+                         printf("%i", i); 
+                 if (i < 100) 
+                         printf(" "); 
          } 
-  
+         printf("\n"); 
+         return (0); 
  }
