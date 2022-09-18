@@ -1,5 +1,6 @@
 # 0x03. C - More functions, more nested loops 
- ## About 
+ 
+## About 
  An introductory project on: 
  - nested loops and how to use them 
  - functions and how to use them 
@@ -7,12 +8,15 @@
  - prototypes 
  - scope of variables 
  - header files and how to to use them with `#include` 
+
  ## Requirements 
  - Ubuntu 14.04 
  - gcc 4.8.4 
  - no standard library functions 
  - code should use the Betty coding style
+
  ## File Descriptions 
+
  ### Mandatory 
  **[0-isupper.c](0-isupper.c)** - function that checks for uppercase character. 
   
