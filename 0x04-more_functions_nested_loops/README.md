@@ -1,6 +1,7 @@
 # 0x03. C - More functions, more nested loops 
  
 ## About 
+
  An introductory project on: 
  - nested loops and how to use them 
  - functions and how to use them 
