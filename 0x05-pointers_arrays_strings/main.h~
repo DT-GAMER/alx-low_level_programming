@@ -1,0 +1,12 @@
+int _putchar(char);
+void reset_to_98(int *n);
+void swap_int(int *a, *b);
+int _strlen(car *a);
+
+void _puts(*str)&â;
+void print_rev(char *s);
+void rev_string(char *s);
+void puts2(char *str);
+void puts_half(char *str);
+void *_strpcy(char *dest, *src);
+int _atoi(char *s);
