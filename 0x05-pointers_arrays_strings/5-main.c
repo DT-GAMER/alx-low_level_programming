@@ -1,5 +1,6 @@
-#include "main.h"
 #include <stdio.h>
+
+void rev_string(char *s)
 
 /**
  * main - check the code
