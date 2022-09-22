@@ -13,7 +13,7 @@ while (count >= 0)
 {
 if (str[count] == '\0')
 break;
-7 count++;
+count++;
 }
 
 if (count % 2 == 0)
