@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio>
 
 /**
  * print_array - print out all element of the array
