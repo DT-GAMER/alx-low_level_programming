@@ -2,8 +2,7 @@
 /**
  * _isalpha - controls if a character is alphabetical
  * @c: character to be verified
- * Return: return 0 or1
- */
+ * Return: return 0 or1                                                                  */
 int _isalpha(int c)
 {
 if ((c >= 65  && c <= 90) || (c >= 97 && c <= 122))
