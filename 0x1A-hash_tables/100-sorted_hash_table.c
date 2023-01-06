@@ -1,60 +1,61 @@
 #include "hash_tables.h"
-#include <stdio.h>
+
 /**
- * hash_table_create - Creates a hash table.
- * @size: The size of the array in the hash table
- * Return: A pointer to the hash table that was created.
+ * shash_table_create - creates a hash table
+ * @size: size of the array
+ * Return: a pointer to the newly created hash table
  */
-hash_table_t *hash_table_create(unsigned long int size)
+shash_table_t *shash_table_create(unsigned long int size)
 {
-	hash_table_t *table;
 
-	table = malloc(sizeof(hash_table_t));
-	if (table == NULL || size == 0)
-		return (NULL);
-	table->array = malloc(sizeof(void *) * size);
-	if (table->array == NULL)
-		return (NULL);
-	table->size = size;
-
-	array_null_init(table);
-	return (table);
 }
 
 /**
- * array_null_init - Initializes array slots to NULL
- * @table: Pointer to a hash table struct
+ * shash_table_set - adds an element to the hash table
+ * @ht: hash table
+ * @key: key
+ * @value: value
+ * Return: 1 if success o otherwise
  */
-void array_null_init(hash_table_t *table)
+int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int i;
 
-	for (i = 0; i < table->size; i++)
-		table->array[i] = NULL;
 }
 
 /**
- * shash_table_delete - Deletes a sorted hash table.
- * @ht: A pointer to the sorted hash table.
+ * shash_table_get - retrieves a value associated with a key
+ * @ht: hash table
+ * @key: key
+ * Return: value associated with the element or NULL otherwise
+ */
+char *shash_table_get(const shash_table_t *ht, const char *key)
+{
+
+}
+
+/**
+ * shash_table_print - prints a hash table
+ * @ht: hash table
+ */
+void shash_table_print(const shash_table_t *ht)
+{
+
+}
+
+/**
+ * shash_table_print_rev - prints a hash table reversed
+ * @ht: hash table
+ */
+void shash_table_print_rev(const shash_table_t *ht)
+{
+
+}
+
+/**
+ * shash_table_delete - deletes a hash table
+ * @ht: hash table
  */
 void shash_table_delete(shash_table_t *ht)
 {
-	shash_table_t *head = ht;
-	shash_node_t *node, *tmp;
 
-	if (ht == NULL)
-		return;
-
-	node = ht->shead;
-	while (node)
-	{
-		tmp = node->snext;
-		free(node->key);
-		free(node->value);
-		free(node);
-		node = tmp;
-	}
-
-	free(head->array);
-	free(head);
 }
