@@ -1,47 +1,30 @@
 #include "hash_tables.h"
 
 /**
-
- *hash_table_get - function that retrieves a value associated with a key
-
+ * hash_table_get - Get a value from the hash table.
+ * @ht: Hash table.
+ * @key: Key.
  *
-
- *@ht: hash table you want to look into
-
- *@key: the key you are looking for
-
- *
-
- *Return: the value associated with the element else NULL
-
+ * Return: The value if works, NULL if doesn't.
  */
-
 char *hash_table_get(const hash_table_t *ht, const char *key)
-
 {
+	unsigned long int index;
+	hash_node_t *current;
 
-hash_node_t *nodo;
+	if (strcmp(key, "") == 0 || key == NULL || ht == NULL)
+		return (NULL);
 
-unsigned long int index;
-
-if (key == NULL || ht == NULL)
-
-return (NULL);
-
-index = key_index((const unsigned char *)key, ht->size);
-
-nodo = ht->array[index];
-
-for (; nodo != NULL; nodo = nodo->next)
-
-{
-
-if (strcmp(nodo->key, key) == 0)
-
-return (nodo->value);
-
-}
-
-return (NULL);
-
+	index = key_index((const unsigned char *)key, ht->size);
+	current = ht->array[index];
+	if (current == NULL)
+		return (NULL);
+	while (strcmp(current->key, key) && current != NULL)
+	{
+		current = current->next;
+	}
+	if (current == NULL)
+		return (NULL);
+	else
+		return (current->value);
 }
